@@ -1,18 +1,27 @@
 import { LuInfo } from "react-icons/lu";
+import { useIsVisible } from "../../utils/hooks";
+import { useRef } from "react";
 
 export default function About() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(ref);
+
   return (
-    <section>
+    <section
+      id="about"
+      className={`pt-20 md:pt-32 transition-opacity ease-in duration-[900ms] ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }
+`}
+      ref={ref}
+    >
       <div className="flex items-center gap-4">
         <LuInfo size={24} />
-        <h3 className="font-bold sm:text-2xl">Sobre mim</h3>
+        <h3 className="font-bold text-xl lg:text-2xl">Sobre mim</h3>
         <span className="border-b border-textDark flex-1"></span>
       </div>
-      <h4 className="mt-8 mb-2 font-semibold text-zinc-700 lg:text-[1.1rem]">
-        Estudante de{" "}
-        <span className="text-primary">Engenharia de Software</span>
-      </h4>
-      <p className="text-justify">
+
+      <p className="text-justify mt-6 text-sm lg:text-base">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
         itaque necessitatibus aspernatur perspiciatis consectetur voluptates
         eum, temporibus suscipit, possimus velit aliquam sint earum cupiditate
@@ -20,27 +29,45 @@ export default function About() {
         doloremque facere minus? Optio repudiandae explicabo ipsam dolore at
         repellat eligendi? Asperiores excepturi ab eveniet tempora.
       </p>
-      <h4 className="mt-8 mb-2 font-semibold text-zinc-700 lg:text-[1.1rem]">
+      <h4 className="mt-8 mb-2 font-semibold text-zinc-700 text-[1.1rem]">
         Experiência
       </h4>
-      <div className="flex mt-4 mb-2 gap-4 items-end">
-        <strong className=" font-semibold">DBC Company</strong>
-        <span className="text-zinc-500 font-medium text-sm">
-          12/2023 - 05/2024
-        </span>
+
+      <div className="flex mt-4 gap-6">
+        <div className="flex flex-col">
+          <div className="flex items-end mt-[10px] relative">
+            <span className="w-3 h-[2px] bg-primary"></span>
+            <span className="rounded-full h-3 w-3 absolute border-2 border-primary -bottom-[5px] left-2.5"></span>
+          </div>
+
+          <span className="flex-1 h-full w-[2px] bg-primary"></span>
+        </div>
+
+        <div>
+          <div className="flex mb-2 gap-4 items-end">
+            <strong className="font-semibold">DBC Company</strong>
+            <span className="text-zinc-500 font-medium text-sm">
+              12/2023 - 05/2024
+            </span>
+          </div>
+          <div className="flex gap-10">
+            <p className="text-justify text-sm lg:text-base">
+              Durante o período que estive na DBC, participei do programa
+              <span className="text-primary font-medium"> Vem Ser DBC</span>,
+              uma formação intensiva e abrangente que estimula o desenvolvimento
+              pessoal e profissional dos colaboradores. Dentro do programa "Vem
+              Ser", fiz parte da trilha de Frontend, onde aprimorei meu
+              conhecimento nas
+              <span className="text-primary font-medium">
+                {" "}
+                tecnologias mais utilizadas no mercado
+              </span>
+              , como: HTML/CSS, JavaScript, React, Angular, TypeScript, Redux,
+              ContextAPI, Git, entre outras.
+            </p>
+          </div>
+        </div>
       </div>
-      <p className="text-justify">
-        Durante o período que estive na DBC, participei do programa "Vem Ser
-        DBC", uma formação intensiva e abrangente que estimula o desenvolvimento
-        pessoal e profissional dos colaboradores. Dentro do programa "Vem Ser",
-        fiz parte da trilha de Frontend, onde aprimorei meu conhecimento nas
-        tecnologias mais utilizadas no mercado, como: HTML/CSS, JavaScript,
-        React, Angular, TypeScript, Redux, ContextAPI, Git, entre outras.
-      </p>
-      {/* <button className="mt-6 flex items-center gap-2 justify-center before:ease relative h-11 w-[136px] rounded-md font-medium overflow-hidden bg-gradient-to-tr from-blue-500 to-primary text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-blue-400 hover:before:-translate-x-40">
-        <LuInfo size={20} />
-        Veja mais
-      </button> */}
     </section>
   );
 }

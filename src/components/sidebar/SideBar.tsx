@@ -1,17 +1,27 @@
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 import SideMenu from "../sideMenu/SideMenu";
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 export default function SideBar() {
   return (
-    <aside className="lg:fixed flex h-full">
+    <aside className="flex fixed w-full h-full">
       <div className="flex flex-col justify-between h-full pt-28 pb-10 max-h-[680px]">
         <div>
-          <h1 className="text-4xl font-extrabold sm:text-[3.2rem]">
+          <h1 className="text-[2.6rem] font-extrabold lg:text-5xl">
             Lorenzo Panato
           </h1>
-          <h2 className="font-bold mt-4 text-2xl">
-            Desenvolvedor <span className="text-primary">Front-End</span>
+          <h2 className="font-bold mt-1 flex gap-1.5 lg:mt-4 text-[1.35rem] lg:text-2xl">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Desenvolvedor Front-End")
+                  .start();
+              }}
+              options={{
+                delay: 90
+              }}
+            />
           </h2>
         </div>
         <SideMenu />
