@@ -5,15 +5,19 @@ import SideBar from "../../components/sidebar/SideBar";
 import Technologies from "../../components/technologies/Technologies";
 import Typewriter from "typewriter-effect";
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import Header from "../../components/header/Header";
 
 export default function Home() {
   return (
-    <div className="w-screen px-4 sm:px-10 flex flex-col md:flex-row justify-between max-w-screen-xl h-screen text-textDark">
+    <div className="w-screen px-6 sm:px-10 flex flex-col md:flex-row justify-between max-w-screen-xl h-screen text-textDark">
+      <div className="block md:hidden">
+        <Header />
+      </div>
       <div className="min-w-[330px] hidden md:block flex-1 max-w-[540px]">
         <SideBar />
       </div>
-      
-      <div className="flex flex-col md:hidden pt-16">
+
+      <div className="flex flex-col md:hidden pt-6 md:pt-16">
         <div>
           <h1 className="text-4xl sm:text-[2.6rem] font-extrabold">
             Lorenzo Panato
@@ -61,6 +65,17 @@ export default function Home() {
         <About />
         <Technologies />
         <Projects />
+
+        <span className="border-b border-textDark w-full mb-4"></span>
+        <p className="pb-5 text-sm lg:text-base">
+          Desenvolvido por{" "}
+          <span className="font-medium text-primary">Lorenzo Panato</span>.
+          Sinta-se à vontade para contatar-me por e-mail em{" "}
+          <span className="font-medium text-primary">
+            lorenzohpanato@gmail.com
+          </span>{" "}
+          para qualquer convite ou oportunidade.
+        </p>
       </main>
     </div>
   );

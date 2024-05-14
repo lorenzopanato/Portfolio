@@ -18,6 +18,7 @@ import { FaSass } from "react-icons/fa";
 import { LuCode2 } from "react-icons/lu";
 import { SiMui } from "react-icons/si";
 import { useIsVisible } from "../../utils/hooks";
+import { RiNextjsFill } from "react-icons/ri";
 
 export default function Technologies() {
   const ref = useRef<HTMLDivElement>(null);
@@ -70,7 +71,6 @@ export default function Technologies() {
           <SiMui size={38} />
           Material UI
         </div>
-
         <div className="flex flex-col gap-1 text-sm lg:text-base font-medium items-center justify-center rounded-md bg-zinc-50 shadow md:max-w-36 h-28 transition-colors hover:border-sky-500 hover:text-sky-500 cursor-default border-b-[10px]">
           <BiLogoTailwindCss size={46} />
           Tailwind CSS
@@ -78,6 +78,10 @@ export default function Technologies() {
         <div className="flex flex-col gap-1 text-sm lg:text-base font-medium items-center justify-center rounded-md bg-zinc-50 shadow md:max-w-36 h-28 transition-colors hover:border-pink-600 hover:text-pink-600 cursor-default border-b-[10px]">
           <FaSass size={46} />
           Sass
+        </div>
+        <div className="flex flex-col gap-1 text-sm lg:text-base font-medium items-center justify-center rounded-md bg-zinc-50 shadow md:max-w-36 h-28 transition-colors hover:border-zinc-900 hover:text-zinc-900 cursor-default border-b-[10px]">
+          <RiNextjsFill size={46} />
+          NextJS
         </div>
         <div className="flex flex-col gap-1 text-sm lg:text-base font-medium items-center justify-center rounded-md bg-zinc-50 shadow md:max-w-36 h-28 transition-colors hover:border-rose-700 hover:text-rose-700 cursor-default border-b-[10px]">
           <BiLogoAngular size={46} />

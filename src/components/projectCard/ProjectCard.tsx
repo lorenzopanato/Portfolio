@@ -30,8 +30,8 @@ export default function ProjectCard({ project }: { project: IProject }) {
               </strong>
               <p className="font-medium mt-1 lg:mt-2 text-sm lg:text-base">{project.description}</p>
               <div className="flex gap-1 lg:gap-4 mt-3 lg:mt-6 flex-wrap justify-center text-xs lg:text-sm">
-                {project.tecnologies.map((tech) => (
-                  <div className="rounded-full py-1 px-2 lg:px-3 shadow-xl border bg-textDark text-textLight cursor-default">
+                {project.tecnologies.map((tech, index) => (
+                  <div key={index} className="rounded-full py-1 px-2 lg:px-3 shadow-xl border bg-textDark text-textLight cursor-default">
                     {tech}
                   </div>
                 ))}

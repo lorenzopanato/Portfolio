@@ -1,4 +1,4 @@
-import { LuMonitorPlay } from "react-icons/lu";
+import { LuArrowRight, LuMonitorPlay } from "react-icons/lu";
 import ProjectCard from "../projectCard/ProjectCard";
 import { IProject } from "../../utils/types/Project";
 import EClothing from "../../assets/e-clothing.png";
@@ -6,6 +6,7 @@ import Livrux from "../../assets/livrux.png";
 import RM from "../../assets/rm.png";
 import { useRef } from "react";
 import { useIsVisible } from "../../utils/hooks";
+import { Link } from "react-router-dom";
 
 const projects: IProject[] = [
   {
@@ -67,7 +68,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className={`pt-20 md:pt-32 pb-40 transition-opacity ease-in duration-[900ms] ${
+      className={`py-20 md:py-32 transition-opacity ease-in duration-[900ms] ${
         isVisible ? "opacity-100" : "opacity-0"
       }
 `}
@@ -82,6 +83,13 @@ export default function Projects() {
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
+
+        <Link to={"https://github.com/lorenzopanato/Portfolio"} target="_blank">
+          <div id="contact" className="flex gap-1 items-center cursor-pointer transition-all hover:text-primary hover:gap-2">
+            <strong>Código fonte deste portfólio</strong>
+            <LuArrowRight size={20} />
+          </div>
+        </Link>
       </div>
     </section>
   );

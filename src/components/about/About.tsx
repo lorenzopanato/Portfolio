@@ -22,12 +22,17 @@ export default function About() {
       </div>
 
       <p className="text-justify mt-6 text-sm lg:text-base">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-        itaque necessitatibus aspernatur perspiciatis consectetur voluptates
-        eum, temporibus suscipit, possimus velit aliquam sint earum cupiditate
-        ut eligendi natus obcaecati sequi porro incidunt et similique eius
-        doloremque facere minus? Optio repudiandae explicabo ipsam dolore at
-        repellat eligendi? Asperiores excepturi ab eveniet tempora.
+        Meu nome é Lorenzo Panato, tenho 19 anos e sou estudante de Engenharia
+        de Software. Desenvolvo{" "}
+        <span className="text-primary font-medium">
+          interfaces modernas e de alta qualidade
+        </span>
+        , priorizando performance, responsividade, acessibilidade e SEO. Além
+        disso, possuo experiência em <span className="text-primary font-medium">projetos colaborativos</span> com desenvolvimento
+        gerenciado por{" "}
+        <span className="text-primary font-medium">metodologias ágeis</span>.
+        Estou comprometido em buscar constantemente meu aprimoramento e em
+        contribuir de forma significativa em equipes e projetos desafiadores.
       </p>
       <h4 className="mt-8 mb-2 font-semibold text-zinc-700 text-[1.1rem]">
         Experiência
