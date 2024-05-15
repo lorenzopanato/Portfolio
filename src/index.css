@@ -14,3 +14,9 @@ body {
   justify-content: center;
   overflow-x: hidden;
 }
+
+.about span,
+.footer span {
+  font-weight: 500;
+  color: #0261e3;
+}

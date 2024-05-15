@@ -7,13 +7,15 @@ import RM from "../../assets/rm.png";
 import { useRef } from "react";
 import { useIsVisible } from "../../utils/hooks";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const projects: IProject[] = [
   {
     image: EClothing,
     title: "E Clothing",
-    description:
+    brDescription:
       "E-Commerce completo, oferecendo uma ampla variedade de produtos e integrado à Fake Store API para obter os dados dos produtos.",
+    usDescription: "A complete e-commerce, offering a wide variety of products and integrated with the Fake Store API to get product data.",
     tecnologies: [
       "React",
       "TypeScript",
@@ -28,8 +30,9 @@ const projects: IProject[] = [
   {
     image: Livrux,
     title: "Livrux",
-    description:
+    brDescription:
       "Livraria online desenvolvida com o objetivo de praticar Redux, integrada à Google Books API para obter os dados dos livros e à Reqres API para simular o cadastro e login de usuários.",
+    usDescription: "Online bookstore developed with the goal of practicing Redux, integrated with the Google Books API to get book data and the Reqres API to simulate user registration and login.",
     tecnologies: [
       "React",
       "TypeScript",
@@ -46,8 +49,9 @@ const projects: IProject[] = [
   {
     image: RM,
     title: "Rick and Morty Website",
-    description:
-      "Uma espécie de blog sobre a série animada Rick and Morty, integrado com a Rick and Morty API para obter os dados de todos os personagens.",
+    brDescription:
+      "Um tipo de blog sobre a série animada Rick and Morty, integrado com a Rick and Morty API para obter os dados de todos os personagens.",
+    usDescription: "A blog about the animated series Rick and Morty, integrated with the Rick and Morty API to get data about all the characters.",
     tecnologies: [
       "React",
       "TypeScript",
@@ -64,6 +68,7 @@ const projects: IProject[] = [
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIsVisible(ref);
+  const { t } = useTranslation();
 
   return (
     <section
@@ -76,7 +81,7 @@ export default function Projects() {
     >
       <div className="flex items-center gap-4">
         <LuMonitorPlay size={24} />
-        <h3 className="font-bold text-xl lg:text-2xl">Principais Projetos</h3>
+        <h3 className="font-bold text-xl lg:text-2xl">{t("projectsTitle")}</h3>
         <span className="border-b border-textDark flex-1"></span>
       </div>
       <div className="mt-12 flex flex-col gap-10 sm:gap-20">
@@ -85,8 +90,11 @@ export default function Projects() {
         ))}
 
         <Link to={"https://github.com/lorenzopanato/Portfolio"} target="_blank">
-          <div id="contact" className="flex gap-1 items-center cursor-pointer transition-all hover:text-primary hover:gap-2">
-            <strong>Código fonte deste portfólio</strong>
+          <div
+            id="contact"
+            className="flex gap-1 items-center cursor-pointer transition-all hover:text-primary hover:gap-2"
+          >
+            <strong>{t("sourceCodeOfPortfolio")}</strong>
             <LuArrowRight size={20} />
           </div>
         </Link>

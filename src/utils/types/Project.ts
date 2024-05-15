@@ -1,7 +1,8 @@
 export interface IProject {
   image: string;
   title: string;
-  description: string;
+  brDescription: string;
+  usDescription: string;
   tecnologies: string[];
   website: string;
   sourceCode: string;

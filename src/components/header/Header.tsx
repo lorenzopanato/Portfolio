@@ -3,10 +3,12 @@ import { Link as ScrollLink } from "react-scroll";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LuGithub, LuLinkedin, LuMail, LuMenu, LuX } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -37,7 +39,7 @@ export default function Header() {
             } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
-            <span className="mb-1">Sobre mim</span>
+            <span className="mb-1">{t("aboutTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#about" && "w-full"
@@ -58,7 +60,7 @@ export default function Header() {
             } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
-            <span className="mb-1">Tecnologias</span>
+            <span className="mb-1">{t("skillsTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#technologies" && "w-full"
@@ -80,7 +82,7 @@ export default function Header() {
             } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
-            <span className="mb-1">Projetos</span>
+            <span className="mb-1">{t("projectsTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#projects" && "w-full"
@@ -102,7 +104,7 @@ export default function Header() {
             } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
-            <span className="mb-1">Contato</span>
+            <span className="mb-1">{t("contactTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#contact" && "w-full"

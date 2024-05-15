@@ -19,10 +19,12 @@ import { LuCode2 } from "react-icons/lu";
 import { SiMui } from "react-icons/si";
 import { useIsVisible } from "../../utils/hooks";
 import { RiNextjsFill } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 export default function Technologies() {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIsVisible(ref);
+  const { t } = useTranslation();
 
   return (
     <section
@@ -35,7 +37,7 @@ export default function Technologies() {
     >
       <div className="flex items-center gap-4">
         <LuCode2 size={28} />
-        <h3 className="font-bold text-xl lg:text-2xl">Tecnologias</h3>
+        <h3 className="font-bold text-xl lg:text-2xl">{t("skillsTitle")}</h3>
         <span className="border-b border-textDark flex-1"></span>
       </div>
 
