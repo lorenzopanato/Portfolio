@@ -104,6 +104,8 @@ export default function SideBar() {
             <button
               onClick={handleDarkMode}
               className="border rounded-md p-1 transition-all hover:bg-zinc-50 active:bg-zinc-100 dark:hover:bg-zinc-700 dark:active:bg-zinc-900"
+              aria-label="dark-mode-button"
+              title="Light/dark mode"
             >
               {localStorage.getItem("dark") !== null ? <LuMoon size={20} /> : <LuSunMedium size={20} />}
             </button>
