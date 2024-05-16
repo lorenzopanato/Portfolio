@@ -46,23 +46,6 @@ const projects: IProject[] = [
     website: "https://livrux.vercel.app/",
     sourceCode: "https://github.com/lorenzopanato/livrux",
   },
-  {
-    image: RM,
-    title: "Rick and Morty Website",
-    brDescription:
-      "Um tipo de blog sobre a série animada Rick and Morty, integrado com a Rick and Morty API para obter os dados de todos os personagens.",
-    usDescription: "A blog about the animated series Rick and Morty, integrated with the Rick and Morty API to get data about all the characters.",
-    tecnologies: [
-      "React",
-      "TypeScript",
-      "Scss",
-      "ContextAPI",
-      "Material UI",
-      "Vite",
-    ],
-    website: "https://rick-and-morty-website-red.vercel.app/",
-    sourceCode: "https://github.com/lorenzopanato/rick-and-morty-website",
-  },
 ];
 
 export default function Projects() {
