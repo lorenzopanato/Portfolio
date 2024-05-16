@@ -3,7 +3,6 @@ import ProjectCard from "../projectCard/ProjectCard";
 import { IProject } from "../../utils/types/Project";
 import EClothing from "../../assets/e-clothing.png";
 import Livrux from "../../assets/livrux.png";
-import RM from "../../assets/rm.png";
 import { useRef } from "react";
 import { useIsVisible } from "../../utils/hooks";
 import { Link } from "react-router-dom";
