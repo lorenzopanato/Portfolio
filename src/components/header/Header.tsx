@@ -20,9 +20,10 @@ export default function Header() {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ color: "#082b47", backgroundColor: "#ffffff", height: "100vh" }}
+      sx={{ color: "#082b47", height: "100vh" }}
     >
-      <div className="py-4 px-6 flex items-center justify-end ">
+    <div className="h-full bg-textLight dark:text-textLight dark:bg-slate-900">
+    <div className="py-4 px-6 flex items-center justify-end ">
         <LuX size={30} className="cursor-pointer" />
       </div>
       <ul className="text-lg flex flex-col pl-10 gap-2 font-medium w-full">
@@ -35,15 +36,15 @@ export default function Header() {
         >
           <li
             className={`transition-all flex flex-col ${
-              location.hash === "#about" && "text-primary"
-            } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
+              location.hash === "#about" && "text-primary dark:text-primaryDark"
+            } group hover:text-primary dark:hover:text-primaryDark duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
             <span className="mb-1">{t("aboutTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#about" && "w-full"
-              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary transition-all duration-300`}
+              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary dark:from-blue-200 dark:to-primaryDark  transition-all duration-300`}
             ></span>
           </li>
         </ScrollLink>
@@ -56,15 +57,15 @@ export default function Header() {
         >
           <li
             className={`transition-all flex flex-col ${
-              location.hash === "#technologies" && "text-primary"
-            } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
+              location.hash === "#technologies" && "text-primary dark:text-primaryDark"
+            } group hover:text-primary dark:hover:text-primaryDark duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
             <span className="mb-1">{t("skillsTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#technologies" && "w-full"
-              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary transition-all duration-300`}
+              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary dark:from-blue-200 dark:to-primaryDark  transition-all duration-300`}
             ></span>
           </li>
         </ScrollLink>
@@ -78,15 +79,15 @@ export default function Header() {
         >
           <li
             className={`transition-all flex flex-col ${
-              location.hash === "#projects" && "text-primary"
-            } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
+              location.hash === "#projects" && "text-primary dark:text-primaryDark"
+            } group hover:text-primary dark:hover:text-primaryDark duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
             <span className="mb-1">{t("projectsTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#projects" && "w-full"
-              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary transition-all duration-300`}
+              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary dark:from-blue-200 dark:to-primaryDark  transition-all duration-300`}
             ></span>
           </li>
         </ScrollLink>
@@ -100,15 +101,15 @@ export default function Header() {
         >
           <li
             className={`transition-all flex flex-col ${
-              location.hash === "#contact" && "text-primary"
-            } group hover:text-primary duration-300 cursor-pointer w-40 relative`}
+              location.hash === "#contact" && "text-primary dark:text-primaryDark"
+            } group hover:text-primary dark:hover:text-primaryDark duration-300 cursor-pointer w-40 relative`}
             onClick={handleDrawerToggle}
           >
             <span className="mb-1">{t("contactTitle")}</span>
             <span
               className={`h-[2px] rounded-full w-0 ${
                 location.hash === "#contact" && "w-full"
-              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary transition-all duration-300`}
+              } absolute bottom-0 left-0 group-hover:w-full bg-gradient-to-r from-blue-400 to-primary dark:from-blue-200 dark:to-primaryDark  transition-all duration-300`}
             ></span>
           </li>
         </ScrollLink>
@@ -121,24 +122,25 @@ export default function Header() {
           <LuLinkedin
             size={26}
             title="Linkedin"
-            className="transition-all cursor-pointer hover:text-primary"
+            className="transition-all cursor-pointer hover:text-primary dark:hover:text-primaryDark"
           />
         </Link>
         <Link to="https://github.com/lorenzopanato" target="_blank">
           <LuGithub
             size={26}
             title="Github"
-            className="transition-all cursor-pointer hover:text-primary"
+            className="transition-all cursor-pointer hover:text-primary dark:hover:text-primaryDark"
           />
         </Link>
         <Link to="mailto:lorenzohpanato@gmail.com" target="_blank">
           <LuMail
             size={26}
             title="Email"
-            className="transition-all cursor-pointer hover:text-primary"
+            className="transition-all cursor-pointer hover:text-primary dark:hover:text-primaryDark"
           />
         </Link>
       </div>
+    </div>
     </Box>
   );
 

@@ -82,7 +82,7 @@ export default function Projects() {
       <div className="flex items-center gap-4">
         <LuMonitorPlay size={24} />
         <h3 className="font-bold text-xl lg:text-2xl">{t("projectsTitle")}</h3>
-        <span className="border-b border-textDark flex-1"></span>
+        <span className="border-b border-textDark dark:border-textLight flex-1"></span>
       </div>
       <div className="mt-12 flex flex-col gap-10 sm:gap-20">
         {projects.map((project, index) => (
@@ -92,7 +92,7 @@ export default function Projects() {
         <Link to={"https://github.com/lorenzopanato/Portfolio"} target="_blank">
           <div
             id="contact"
-            className="flex gap-1 items-center cursor-pointer transition-all hover:text-primary hover:gap-2"
+            className="flex gap-1 items-center cursor-pointer transition-all hover:text-primary dark:hover:text-primaryDark hover:gap-2"
           >
             <strong>{t("sourceCodeOfPortfolio")}</strong>
             <LuArrowRight size={20} />

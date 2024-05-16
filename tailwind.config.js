@@ -21,6 +21,7 @@ const Myclass = plugin(function ({ addUtilities }) {
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "selector",
   theme: {
     fontFamily: {
       sans: ["Inter", "sans-serif"],
@@ -28,6 +29,7 @@ export default {
     extend: {
       colors: {
         primary: "#0261e3",
+        primaryDark: "#00e1ff",
         textDark: "#082b47",
         textLight: "#ffffff",
       },

@@ -26,15 +26,15 @@ export default function ProjectCard({ project }: { project: IProject }) {
               className="w-full h-full transition-all grayscale hover:grayscale-0"
             />
           </div>
-          <div className="absolute top-0 my-rotate-y-180 rounded-md backface-hidden border shadow w-full h-full bg-zinc-50/90 overflow-hidden">
-            <div className="text-center flex flex-col items-center justify-center h-full px-4 lg:px-6">
-              <strong className="text-xl lg:text-2xl font-extrabold">
+          <div className="absolute top-0 my-rotate-y-180 rounded-md backface-hidden border shadow w-full h-full bg-zinc-50/90 dark:bg-zinc-800/90 overflow-hidden">
+            <div className="text-center flex flex-col items-center justify-center h-full px-1 lg:px-6">
+              <strong className="text-lg sm:text-xl lg:text-2xl font-extrabold">
                 {project.title}
               </strong>
               <p className="font-medium mt-1 lg:mt-2 text-sm lg:text-base">{i18n.language === "br" ? project.brDescription : project.usDescription}</p>
               <div className="flex gap-1 lg:gap-4 mt-3 lg:mt-6 flex-wrap justify-center text-xs lg:text-sm">
                 {project.tecnologies.map((tech, index) => (
-                  <div key={index} className="rounded-full py-1 px-2 lg:px-3 shadow-xl border bg-textDark text-textLight cursor-default">
+                  <div key={index} className="rounded-full py-1 px-2 lg:px-3 shadow-xl bg-textDark dark:bg-zinc-50 dark:text-textDark font-medium text-textLight cursor-default">
                     {tech}
                   </div>
                 ))}
@@ -54,7 +54,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
           </Link>
 
           <Link to={project.sourceCode} target="_blank">
-            <button className="before:ease relative group text-sm lg:text-base py-1 lg:py-1.5 px-2 lg:px-3 flex gap-1 lg:gap-2 rounded-md font-medium overflow-hidden border border-textDark before:absolute before:left-0 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-textDark before:transition-all before:duration-[400ms] hover:text-white hover:before:-rotate-180">
+            <button className="before:ease relative group text-sm lg:text-base py-1 lg:py-1.5 px-2 lg:px-3 flex gap-1 lg:gap-2 rounded-md font-medium overflow-hidden border border-textDark dark:border-textLight before:absolute before:left-0 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-black before:transition-all before:duration-[400ms] hover:text-white hover:before:-rotate-180">
               <AiFillGithub className="z-10" size={26} />
               <span className="relative z-10 pt-[3px] lg:pt-[1px]">{t("sourceCode")}</span>
             </button>
@@ -63,7 +63,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
         <LuInfo
           size={26}
           title={t("moreInfo")}
-          className="cursor-pointer transition-colors z-50 text-zinc-700 hover:text-textDark"
+          className="cursor-pointer transition-colors z-50 text-zinc-700 hover:text-textDark dark:text-zinc-50 dark:hover:text-textLight"
           onClick={() => setIsFlipped(!isFlipped)}
         />
       </div>

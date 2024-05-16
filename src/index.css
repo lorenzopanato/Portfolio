@@ -10,13 +10,25 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
   overflow-x: hidden;
+}
+
+body .dark {
+  background-color: #010e1ae8;
 }
 
 .about span,
 .footer span {
   font-weight: 500;
   color: #0261e3;
+}
+
+.dark {
+  .about span {
+    color: #00e1ff;
+  }
+
+  .footer span {
+    color: #00e1ff;
+  }
 }
