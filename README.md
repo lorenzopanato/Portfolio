@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+<h1 align="center">Portfolio - Lorenzo Panato</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-sobre-o-projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#lighthouse">Lighthouse</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-Currently, two official plugins are available:
+![image](https://github.com/lorenzopanato/Portfolio/assets/132415449/3aa8dd03-84f3-4a21-8f2b-ec52a1a0be1f)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## Expanding the ESLint configuration
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Tailwind CSS
+- Material UI
+- Vite
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 Sobre o Projeto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Site: [Link para o Vercel](https://lorenzopanato.vercel.app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Lighthouse
+
+Todos os testes do Lighthouse alcançaram ótimos desempenhos:
+
+![image](https://github.com/lorenzopanato/Portfolio/assets/132415449/5a1c5289-88e7-4142-b1cf-9ae56437045a)
+
+
