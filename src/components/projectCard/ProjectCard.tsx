@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
               className="w-full h-full transition-all grayscale hover:grayscale-0"
             />
           </div>
-          <div className="absolute top-0 my-rotate-y-180 rounded-md backface-hidden border shadow w-full h-full bg-zinc-50/90 dark:bg-zinc-800/90 overflow-hidden">
+          <div className="absolute top-0 my-rotate-y-180 rounded-md backface-hidden shadow-2xl shadow-zinc-800 border w-full h-full bg-zinc-50/90 dark:bg-zinc-800/90 overflow-hidden">
             <div className="text-center flex flex-col items-center justify-center h-full px-1 lg:px-6">
               <strong className="text-lg sm:text-xl lg:text-2xl font-extrabold">
                 {project.title}
