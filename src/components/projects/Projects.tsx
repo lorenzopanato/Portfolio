@@ -2,6 +2,7 @@ import { LuArrowRight, LuMonitorPlay } from "react-icons/lu";
 import ProjectCard from "../projectCard/ProjectCard";
 import { IProject } from "../../utils/types/Project";
 import EClothing from "../../assets/e-clothing.png";
+import CoinTracker from "../../assets/coin-tracker.png";
 import Livrux from "../../assets/livrux.png";
 import { useRef } from "react";
 import { useIsVisible } from "../../utils/hooks";
@@ -9,6 +10,23 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const projects: IProject[] = [
+  {
+    image: CoinTracker,
+    title: "CoinTracker",
+    brDescription:
+      "Página integrada à API CoinGecko, com dados atualizados em tempo real de mais de 100 criptomoedas.",
+    usDescription: "Page integrated with the CoinGecko API, with real-time updated data for over 100 cryptocurrencies.",
+    tecnologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "ContextAPI",
+      "Material UI",
+    ],
+    website: "https://coin-tracker-blue.vercel.app/",
+    sourceCode: "https://github.com/lorenzopanato/coin-tracker",
+  },
   {
     image: EClothing,
     title: "E Clothing",

@@ -19,14 +19,14 @@ export default function ProjectCard({ project }: { project: IProject }) {
           } w-full h-full duration-1000 z-50`}
           onClick={() => setIsFlipped(!isFlipped)}
         >          
-          <div className="flex items-center border shadow rounded-md overflow-hidden w-full h-full">
+          <div className="flex items-center border border-zinc-600 shadow-lg rounded-md overflow-hidden w-full h-full">
             <img
               src={project.image}
               alt={`imagem do projeto ${project.title}`}
-              className="w-full h-full transition-all grayscale hover:grayscale-0"
+              className="w-full h-full transition-all"
             />
           </div>
-          <div className="absolute top-0 my-rotate-y-180 rounded-md backface-hidden shadow-2xl shadow-zinc-800 border w-full h-full bg-zinc-50/90 dark:bg-zinc-800/90 overflow-hidden">
+          <div className="absolute top-0 my-rotate-y-180 rounded-md backface-hidden shadow-lg border border-zinc-600 w-full h-full bg-zinc-50/90 dark:bg-zinc-800/90 overflow-hidden">
             <div className="text-center flex flex-col items-center justify-center h-full px-1 lg:px-6">
               <strong className="text-lg sm:text-xl lg:text-2xl font-extrabold">
                 {project.title}
@@ -34,7 +34,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
               <p className="font-medium mt-1 lg:mt-2 text-sm lg:text-base">{i18n.language === "br" ? project.brDescription : project.usDescription}</p>
               <div className="flex gap-1 lg:gap-4 mt-3 lg:mt-6 flex-wrap justify-center text-xs lg:text-sm">
                 {project.tecnologies.map((tech, index) => (
-                  <div key={index} className="rounded-full py-1 px-2 lg:px-3 shadow-xl bg-textDark dark:bg-zinc-50 dark:text-textDark font-medium text-textLight cursor-default">
+                  <div key={index} className="rounded-full py-1 px-2 lg:px-3 shadow-lg bg-textDark dark:bg-zinc-50 dark:text-textDark font-medium text-textLight cursor-default">
                     {tech}
                   </div>
                 ))}
