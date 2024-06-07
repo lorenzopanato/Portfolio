@@ -9,10 +9,10 @@ i18n
     resources: {
       br: {
         translation: {
-          subtitle: "Desenvolvedor Front-End",
+          subtitle: "Desenvolvedor Full-Stack",
           aboutTitle: "Sobre mim",
           about:
-            "Meu nome é Lorenzo Panato, tenho 19 anos e sou estudante de Engenharia de Software. Desenvolvo <span>interfaces modernas e de alta qualidade</span>, priorizando performance, responsividade, acessibilidade e SEO. Além disso, possuo experiência em <span>projetos colaborativos</span> com desenvolvimento gerenciado por <span>metodologias ágeis</span>. Estou comprometido em buscar constantemente meu aprimoramento e em contribuir de forma significativa em equipes e projetos desafiadores.",
+            "Meu nome é Lorenzo Panato, tenho 19 anos e sou estudante de Engenharia de Software. Tenho interesse e conhecimento tanto em Front-End quanto em Back-End, áreas às quais dediquei grande parte do meu tempo de estudos. Além disso, possuo experiência em <span>projetos colaborativos</span> com desenvolvimento gerenciado por <span>metodologias ágeis</span>. Estou comprometido em buscar constantemente meu aprimoramento e em contribuir de forma significativa em equipes e projetos desafiadores.",
           skillsTitle: "Tecnologias",
           projectsTitle: "Projetos",
           contactTitle: "Contato",
@@ -29,10 +29,10 @@ i18n
       },
       us: {
         translation: {
-          subtitle: "Frontend Developer",
+          subtitle: "Full Stack Developer",
           aboutTitle: "About me",
           about:
-            "My name is Lorenzo Panato, I'm 19 years old, and I'm a Software Engineering student. I develop <span>modern and high-quality interfaces</span>, prioritizing performance, responsiveness, accessibility, and SEO. Furthermore, I have experience in <span>collaborative projects</span> with development managed by <span>agile methodologies</span>. I am committed to constantly looking for personal improvements and to contributing significantly to teams and challenging projects.",
+            "My name is Lorenzo Panato, I'm 19 years old, and I'm a Software Engineering student. I have interest and knowledge in both Front-End and Back-End, areas to which I have dedicated a significant amount of my study time. Furthermore, I have experience in <span>collaborative projects</span> with development managed by <span>agile methodologies</span>. I am committed to constantly looking for personal improvements and to contributing significantly to teams and challenging projects.",
           skillsTitle: "Skills",
           projectsTitle: "Projects",
           contactTitle: "Contact",
